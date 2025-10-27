@@ -164,6 +164,11 @@ main {
   box-shadow: var(--shadow);
 }
 
+.panel--highlight {
+  background: linear-gradient(145deg, rgba(110, 205, 255, 0.24), rgba(255, 155, 210, 0.22));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .panel--light {
   background: var(--bg-panel-light);
   color: #1a102f;
@@ -171,6 +176,250 @@ main {
 
 .panel--dark {
   background: var(--bg-panel-dark);
+}
+
+.clinic-grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.clinic-card {
+  background: rgba(10, 6, 24, 0.6);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 18px 36px rgba(10, 5, 38, 0.26);
+}
+
+.clinic-card h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.clinic-card ul {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.clinic-card li + li {
+  margin-top: 6px;
+}
+
+.clinic-card--concept {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(10, 6, 24, 0.6));
+}
+
+.cta--ghost {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--text);
+  box-shadow: none;
+}
+
+.cta--ghost:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.love-test {
+  display: grid;
+  gap: 18px;
+}
+
+.love-test__question {
+  display: grid;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  margin: 0;
+}
+
+.love-test__question legend {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.love-test__options {
+  display: grid;
+  gap: 10px;
+}
+
+.love-test__options label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.love-test__options input {
+  accent-color: var(--accent-strong);
+}
+
+.love-test__result {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.love-test__score {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffe8ff;
+}
+
+.clinic-card__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.clinic-card__note {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.symptom-input textarea {
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(10, 6, 24, 0.6);
+  color: var(--text);
+  padding: 16px;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.symptom-input span {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.symptom-log {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.symptom-entry {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.symptom-entry__text,
+.symptom-entry__rx {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.symptom-log__empty {
+  padding: 20px;
+  border-radius: var(--radius-md);
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.symptom-entry__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.symptom-entry__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.symptom-entry__remove {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.symptom-entry__remove:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.streak {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.streak__count {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.streak__label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.streak__count strong {
+  font-size: 2.6rem;
+  letter-spacing: 2px;
+}
+
+.streak__progress {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  height: 14px;
+  overflow: hidden;
+}
+
+.streak__progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(135deg, rgba(255, 155, 210, 0.95), rgba(110, 205, 255, 0.95));
+  transition: width 0.4s ease;
+}
+
+.streak__message {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.streak__actions {
+  justify-content: flex-start;
+}
+
+.streak__milestones {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .panel__header h2 {
@@ -355,12 +604,71 @@ main {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.idea {
+  padding: 80px 8vw 120px;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 155, 210, 0.18), transparent 45%),
+    radial-gradient(circle at 80% 10%, rgba(110, 205, 255, 0.2), transparent 50%),
+    rgba(10, 6, 24, 0.9);
+}
+
+.idea__inner {
+  max-width: 760px;
+  margin: 0 auto;
+  background: rgba(10, 6, 24, 0.72);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 48px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 20px;
+}
+
+.idea__inner h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+.idea__inner p {
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.idea__label {
+  font-weight: 600;
+}
+
+#idea-answer {
+  width: 100%;
+  min-height: 200px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(10, 6, 24, 0.75);
+  color: var(--text);
+  padding: 24px;
+  font-size: 1rem;
+  line-height: 1.8;
+  resize: vertical;
+}
+
+.idea__footnote {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 @media (max-width: 768px) {
   .hero {
     padding-top: 96px;
   }
 
   .panel {
+    padding: 32px 24px;
+  }
+
+  .clinic-card {
+    padding: 24px;
+  }
+
+  .idea__inner {
     padding: 32px 24px;
   }
 
