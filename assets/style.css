@@ -488,6 +488,7 @@ main {
   transition: border 0.2s ease, transform 0.2s ease, background 0.2s ease;
   display: grid;
   gap: 6px;
+  color: #ffffff;
 }
 
 .zodiac-btn:hover,
@@ -500,6 +501,11 @@ main {
 .zodiac-btn span {
   font-size: 1.1rem;
   font-weight: 700;
+}
+
+.zodiac-btn small {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
 }
 
 .supply-card {
